@@ -3,7 +3,7 @@ import random
 
 #create screen object and set width and height
 screen = Screen()
-screen.setup(800,500)
+screen.setup(850,500)
 
 #make sure still race is not start
 is_race_on = False
@@ -11,6 +11,16 @@ is_race_on = False
 #take user bet as input
 user_bet = screen.textinput(title="make your bet..",prompt="which turtle will win the race? enter a color"
                                                            "(red/orange/yellow/green/blue/indigo/purple) : ")
+
+#create object for add the finish line of the race
+end_line = Turtle()
+end_line.penup()
+end_line.hideturtle()
+end_line.goto(398,-250)
+end_line.pendown()
+end_line.pensize(2)
+end_line.left(90)
+end_line.forward(500)
 
 #lists for store turtle objects, colors, and starting coordinates of the turtles
 new_turtle =[]
